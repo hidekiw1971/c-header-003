@@ -1,0 +1,11 @@
+@use "global" as *;
+.drawer-menu__ul {
+  @include mq(md) {
+    // size
+    height: 100%;
+    // ajustment
+    display: flex;
+  }
+  @include mq(xl) {
+  }
+}

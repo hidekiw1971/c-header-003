@@ -1,0 +1,9 @@
+@use "global" as *;
+.header__title {
+  // size
+  height: 100%;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
