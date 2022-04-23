@@ -1,0 +1,17 @@
+@use "global" as *;
+.header__inner {
+  // size
+  height: 100%;
+  // decoration
+  background-color: #333;
+  color: #fff;
+  // ajustment
+  display: flex;
+  text-align: left;
+  // space
+  padding: rem(0) rem(20);
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}

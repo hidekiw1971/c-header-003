@@ -1,0 +1,11 @@
+@use "global" as *;
+.drawer-menu__li {
+  @include mq(md) {
+    // ajustment
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mq(xl) {
+  }
+}
