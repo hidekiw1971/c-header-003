@@ -198,13 +198,30 @@ select::-ms-expand {
   }
 }
 .drawer-menu {
-  display: none;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background-color: #f00;
 }
 @media screen and (min-width: 768px) {
   .drawer-menu {
     display: block;
     margin-left: auto;
   }
+}
+.drawer-menu.open {
+  left: 0;
 }
 .header__inner {
   height: 100%;
@@ -219,6 +236,8 @@ select::-ms-expand {
 }
 .header__title {
   height: 100%;
+  position: relative;
+  z-index: 10;
 }
 .header {
   display: inline-block;
@@ -233,7 +252,7 @@ select::-ms-expand {
     width: 100%;
   }
 }
-#MenuButton {
+.MenuButton {
   display: block;
   width: 48px;
   width: 3rem;
@@ -243,11 +262,11 @@ select::-ms-expand {
   position: relative;
 }
 @media screen and (min-width: 768px) {
-  #MenuButton {
+  .MenuButton {
     display: none;
   }
 }
-#MenuButton span {
+.MenuButton span {
   width: 100%;
   height: 3px;
   background-color: #fff;
@@ -255,8 +274,10 @@ select::-ms-expand {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
-#MenuButton span::before {
+.MenuButton span::before {
   content: "";
   width: 100%;
   height: 3px;
@@ -264,8 +285,10 @@ select::-ms-expand {
   position: absolute;
   -webkit-transform: translatey(-10px);
           transform: translatey(-10px);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
-#MenuButton span::after {
+.MenuButton span::after {
   content: "";
   width: 100%;
   height: 3px;
@@ -273,15 +296,21 @@ select::-ms-expand {
   position: absolute;
   -webkit-transform: translatey(10px);
           transform: translatey(10px);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
-#MenuButton .open span {
+.open span {
   background-color: rgba(255, 255, 255, 0);
 }
 .open span::before {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .open span::after {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }

@@ -2,6 +2,9 @@
 .header__title {
   // size
   height: 100%;
+  // ajustment
+  position: relative;
+  z-index: 10;
   @include mq(md) {
   }
   @include mq(xl) {
